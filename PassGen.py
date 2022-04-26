@@ -26,3 +26,7 @@ while option != 0:
 
 print()
 print("Exiting program.")
+
+#open in integrated terminal
+#git add PassGen.py
+#git commit -m ""
