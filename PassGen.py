@@ -1,7 +1,4 @@
-
-from random import random
-from re import X
-
+from random import randint
 
 def menu():
     print("[1] Password Generator")
@@ -41,12 +38,14 @@ def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols)
     
     return includedList
 
+# Generates password
 def generatePassword(passLength, includedList):
     
     password = list()
     
     for x in range(passLength):
-        num = random(0,len(includedList))
+        num = randint(0,len(includedList))
+        print(num)
         password[x] = includedList[num]
     
     return password
