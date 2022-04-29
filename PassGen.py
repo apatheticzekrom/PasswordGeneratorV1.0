@@ -1,23 +1,32 @@
+
+
 def menu():
     print("[1] Password Generator")
     print("[2] Ping")
     print("[0] Option 0")
 
+# def inputChecker()
+
 # [1] Password Generator
 def option1():
     answer = str
-    passLength = int(input("Enter password length: "))
-    if passLength.isnumeric() != True:
-        passLength = int(input("Invalid. Enter numerical password length: "))
+    passLength = int
+    
+    answer = str(input("Enter password length: "))
 
+    while answer.isdigit() != True:
+        answer = str(input("Invalid. Enter an integer for password length: "))
     
-    includeLower = int(input("Include lowercase? (y/n): "))
+    passLength = int(answer)
+    print(passLength)
     
-    includeUpper = int(input("Include uppercase? (y/n): "))
+    # includeLower = int(input("Include lowercase? (y/n): "))
     
-    includeNumbers = int(input("Include numbers? (y/n): "))
+    # includeUpper = int(input("Include uppercase? (y/n): "))
     
-    includeSymbols = int(input("Include symbols? (y/n) "))
+    # includeNumbers = int(input("Include numbers? (y/n): "))
+    
+    # includeSymbols = int(input("Include symbols? (y/n) "))
     
     
     
