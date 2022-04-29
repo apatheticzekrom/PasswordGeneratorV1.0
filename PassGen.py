@@ -5,11 +5,7 @@ def menu():
 
 # Function to return True/False based on (y/n) inputs
 def checkYesNo(answer):
-    if answer == "y":
-        return True
-    else:
-        return False
-
+    return answer == "y"
 
 # [1] Password Generator
 def option1():
