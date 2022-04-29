@@ -1,7 +1,3 @@
-from operator import truediv
-from unicodedata import numeric
-
-
 def menu():
     print("[1] Password Generator")
     print("[2] Ping")
