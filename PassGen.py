@@ -1,13 +1,36 @@
+from operator import truediv
+from unicodedata import numeric
+
+
 def menu():
-    print("[1] Option 1")
-    print("[2] Option 2")
+    print("[1] Password Generator")
+    print("[2] Ping")
     print("[0] Option 0")
 
+# [1] Password Generator
 def option1():
-    print("Option 1 selected.")
+    answer = str
+    passLength = int(input("Enter password length: "))
+    if passLength.isnumeric() != True:
+        passLength = int(input("Invalid. Enter numerical password length: "))
+
     
+    includeLower = int(input("Include lowercase? (y/n): "))
+    
+    includeUpper = int(input("Include uppercase? (y/n): "))
+    
+    includeNumbers = int(input("Include numbers? (y/n): "))
+    
+    includeSymbols = int(input("Include symbols? (y/n) "))
+    
+    
+    
+    
+    
+
+# [2] Ping
 def option2():
-    print("Option 2 Selected.")
+    print("Pong.")
 
 menu()
 option = int(input("Enter your option: "))
