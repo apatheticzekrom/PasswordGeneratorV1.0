@@ -1,11 +1,18 @@
+
+from random import random
+from re import X
+
+
 def menu():
     print("[1] Password Generator")
     print("[2] Ping")
     print("[0] Option 0")
 
+
 # Function to return True/False based on (y/n) inputs
 def checkYesNo(answer):
     return answer == "y"
+
 
 # Function to create list of all possible chars
 def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols):
@@ -16,9 +23,10 @@ def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols)
     numberList = list(map(chr, range(48, 57)))
     symbolsList1 = list(map(chr, range(33, 47)))
     symbolsList2 = list(map(chr, range(58, 64)))
-    symbolsList = symbolsList1 + symbolsList2
+    symbolsList = symbolsList1 + symbolsList2    # symbolsList = [*symbolList1, *symbolList2]
     includedList = list()
     
+    # Adds lists needed into includedList
     if includeLower:
         includedList = includedList + alphabetLower
     
@@ -31,14 +39,17 @@ def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols)
     if includeSymbols:
         includedList = includedList + symbolsList
     
-    # Prints
-    print(alphabetLower)
-    print(alphabetUpper)
-    print(numberList)
-    print(symbolsList)
-    print(includedList)
-    
     return includedList
+
+def generatePassword(passLength, includedList):
+    
+    password = list()
+    
+    for x in range(passLength):
+        num = random(0,len(includedList))
+        password[x] = includedList[num]
+    
+    return password
 
 # [1] Password Generator
 def option1():
@@ -76,24 +87,25 @@ def option1():
         answer = str(input("Invalid. Enter (y/n): "))
     includeSymbols = checkYesNo(answer)
     
+    # Calls makeIncludedList and returns into includedList
     includedList = makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols)
     
+    # If user says n/n/n/n, then their password contains nothing
     if includeLower == False and includeUpper == False and includeNumbers == False and includeSymbols == False:
         print("Your Password is: ")
         print("Yes it's blank.")
     else:
-        print("yes")
-
+        password = generatePassword(passLength, includedList)
+        print("Your password is: " + str(password))
     
     
     # Prints for all inputs & lists
-    print("Pass Length: " + str(passLength))
-    print("includeLower: " + str(includeLower))
-    print("includeUpper: " + str(includeUpper))
-    print("includeNumbers: " + str(includeNumbers))
-    print("includeSymbols: " + str(includeSymbols))
-    print("includedList: " + str(includedList))
-    
+    # print("Pass Length: " + str(passLength))
+    # print("includeLower: " + str(includeLower))
+    # print("includeUpper: " + str(includeUpper))
+    # print("includeNumbers: " + str(includeNumbers))
+    # print("includeSymbols: " + str(includeSymbols))
+    # print("includedList: " + str(includedList))
     
     
     
