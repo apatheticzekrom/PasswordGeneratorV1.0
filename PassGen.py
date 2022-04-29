@@ -13,7 +13,6 @@ def checkYesNo(answer):
 
 # Function to create list of all possible chars
 def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols):
-
     # Lists
     alphabetLower = list(map(chr, range(97, 123)))
     alphabetUpper = list(map(chr, range(65, 90)))
@@ -41,16 +40,11 @@ def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols)
 
 # Generates password
 def generatePassword(passLength, includedList):
-    
     password = list()
-    print(includedList)
     shuffle(includedList)
-    print(includedList)
-    
-    
+
     for x in range(passLength):
         num = randint(0,len(includedList))
-        print(num)
         password.append(includedList[num])
     
     return password
@@ -65,20 +59,17 @@ def option1():
         answer = str(input("Invalid. Enter an integer: "))
     passLength = int(answer)
     
-    
     # Include Lowercase
     answer = str(input("Include lowercase? (y/n): "))
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
     includeLower = checkYesNo(answer)
     
-    
     # Include Uppercase
     answer = str(input("Include uppercase? (y/n): "))
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
     includeUpper = checkYesNo(answer)
-        
         
     # Include Numbers
     answer = str(input("Include numbers?   (y/n): "))
@@ -104,7 +95,7 @@ def option1():
         print("Your password is: " + str(password))
              
     
-# [2] Ping
+# [2] Ping (Added this just cuz) (Gamer Status)
 def option2():
     print("Pong.")
 
@@ -126,14 +117,3 @@ while option != "0":
 
 print()
 print("Exiting program.")
-
-#open in integrated terminal
-#git add PassGen.py
-#git commit -m ""
-
-
-# Notes for next iteration
-    # Possible to make password that should have more then just letters, but just happened to only select letters
-    # therefore: keep lists seperate, but have a 25% chance of selecting each list, then select random number based on list length
-    # make check once completed, if list does not contain at least 1 of each, then rerun the function
-    # Also more possible changes for later versions, allow user to select at least how many of each type of char
