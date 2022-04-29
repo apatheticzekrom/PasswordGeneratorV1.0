@@ -13,17 +13,14 @@ def option1():
     # Password Length
     answer = str(input("Enter password length: "))
     while answer.isdigit() != True:
-        answer = str(input("Invalid. Enter an integer for password length: "))
-    
+        answer = str(input("Invalid. Enter an integer: "))
     passLength = int(answer)
-    
     
     
     # Include Lowercase
     answer = str(input("Include lowercase? (y/n): "))
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
-    
     includeLower = checkYesNo(answer)
     
     
@@ -31,29 +28,28 @@ def option1():
     answer = str(input("Include uppercase? (y/n): "))
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
-    
     includeUpper = checkYesNo(answer)
         
         
     # Include Numbers
-    answer = str(input("Include numbers? (y/n): "))
+    answer = str(input("Include numbers?   (y/n): "))
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
-    
     includeNumbers = checkYesNo(answer)
     
     # Include Symbols
-    answer = str(input("Include symbols? (y/n): "))
+    answer = str(input("Include symbols?   (y/n): "))
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
-    
     includeSymbols = checkYesNo(answer)
  
-    print(passLength)
-    print(includeLower)
-    print(includeUpper)
-    print(includeNumbers)
-    print(includeSymbols)
+    print("Pass Length: " + str(passLength))
+    print("includeLower: " + str(includeLower))
+    print("includeUpper: " + str(includeUpper))
+    print("includeNumbers: " + str(includeNumbers))
+    print("includeSymbols: " + str(includeSymbols))
+
+
 
 # [2] Ping
 def option2():
