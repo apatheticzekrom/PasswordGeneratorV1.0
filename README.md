@@ -26,3 +26,8 @@ I wrote these in the code itself, but moved it to the readme because cleanliness
 - Also more possible changes for later versions, allow user to select at least how many of each type of char
 - Possibly just make the next version on the same program, just make it the new option 2, 3, etc.
 - Not case sensitive (y/n)?
+
+Getting used to terminal
+git add ___
+git commit -m ""
+git push
