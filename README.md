@@ -8,7 +8,7 @@ Generates randomly generated passwords (Inspired by LastPass)
 - Input desired password length
 - Specify if you want lowercase, uppercase, numbers, and symbols using "y" or "n"
 ---
-- "0" to exit program when you're on the menu screen
+"0" to exit program when you're on the menu screen
 
 # Limitations
 - Case sensitive (y/n) I did this on purpose though, I don't really know why
@@ -26,4 +26,3 @@ I wrote these in the code itself, but moved it to the readme because cleanliness
 - Also more possible changes for later versions, allow user to select at least how many of each type of char
 - Possibly just make the next version on the same program, just make it the new option 2, 3, etc.
 - Not case sensitive (y/n)?
-
