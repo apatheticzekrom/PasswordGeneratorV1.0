@@ -54,34 +54,35 @@ def option1():
     alphabetLower = list(map(chr, range(97, 123)))
     alphabetUpper = list(map(chr, range(65, 90)))
     numberList = list(map(chr, range(48, 57)))
-    symbolsList = list(map(chr, range(33, 47)))
     
+    symbolsList1 = list(map(chr, range(33, 47)))
+    symbolsList2 = list(map(chr, range(58, 64)))
+    symbolsList = symbolsList1 + symbolsList2 
+                        
     print(alphabetLower)
     print(alphabetUpper)
     print(numberList)
     print(symbolsList)
 
-
-
-
 # [2] Ping
 def option2():
     print("Pong.")
 
+
 menu()
 option = str(input("Enter your option: "))
 
-while option != 0:
-    if option == 1:
+while option != "0":
+    if option == "1":
         option1()
-    elif option == 2:
+    elif option == "2":
         option2()
     else:
         print("Invalid Selection.")
         
     print()
     menu()
-    option = int(input("Enter your option: "))
+    option = str(input("Enter your option: "))
 
 print()
 print("Exiting program.")
