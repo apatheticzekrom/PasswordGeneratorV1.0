@@ -42,12 +42,25 @@ def option1():
     while answer != "y" and answer != "n":
         answer = str(input("Invalid. Enter (y/n): "))
     includeSymbols = checkYesNo(answer)
- 
+
+
+    # Prints for all inputs
     print("Pass Length: " + str(passLength))
     print("includeLower: " + str(includeLower))
     print("includeUpper: " + str(includeUpper))
     print("includeNumbers: " + str(includeNumbers))
     print("includeSymbols: " + str(includeSymbols))
+    
+    alphabetLower = list(map(chr, range(97, 123)))
+    alphabetUpper = list(map(chr, range(65, 90)))
+    numberList = list(map(chr, range(48, 57)))
+    symbolsList = list(map(chr, range(33, 47)))
+    
+    print(alphabetLower)
+    print(alphabetUpper)
+    print(numberList)
+    print(symbolsList)
+
 
 
 
@@ -56,7 +69,7 @@ def option2():
     print("Pong.")
 
 menu()
-option = int(input("Enter your option: "))
+option = str(input("Enter your option: "))
 
 while option != 0:
     if option == 1:
