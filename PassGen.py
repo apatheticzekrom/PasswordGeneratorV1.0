@@ -38,6 +38,7 @@ def makeIncludedList(includeLower, includeUpper, includeNumbers, includeSymbols)
     
     return includedList
 
+
 # Generates password
 def generatePassword(passLength, includedList):
     
@@ -46,12 +47,14 @@ def generatePassword(passLength, includedList):
     shuffle(includedList)
     print(includedList)
     
+    
     for x in range(passLength):
         num = randint(0,len(includedList))
         print(num)
         password.append(includedList[num])
     
     return password
+
 
 # [1] Password Generator
 def option1():
@@ -99,21 +102,8 @@ def option1():
     else:
         password = generatePassword(passLength, includedList)
         print("Your password is: " + str(password))
+             
     
-    
-    # Prints for all inputs & lists
-    # print("Pass Length: " + str(passLength))
-    # print("includeLower: " + str(includeLower))
-    # print("includeUpper: " + str(includeUpper))
-    # print("includeNumbers: " + str(includeNumbers))
-    # print("includeSymbols: " + str(includeSymbols))
-    # print("includedList: " + str(includedList))
-    
-    
-    
-                        
-    
-
 # [2] Ping
 def option2():
     print("Pong.")
@@ -140,3 +130,10 @@ print("Exiting program.")
 #open in integrated terminal
 #git add PassGen.py
 #git commit -m ""
+
+
+# Notes for next iteration
+    # Possible to make password that should have more then just letters, but just happened to only select letters
+    # therefore: keep lists seperate, but have a 25% chance of selecting each list, then select random number based on list length
+    # make check once completed, if list does not contain at least 1 of each, then rerun the function
+    # Also more possible changes for later versions, allow user to select at least how many of each type of char
